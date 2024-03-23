@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.section_title {
+  color: $sectionText;
+  font-family: "Young Serif", sans-serif;
+  font-weight: 400;
+}
+
+.aside_title {
+  color: $asideText;
+  font-family: "Outfit", serif;
+}
+
+.bold {
+  color: $sectionText;
+}

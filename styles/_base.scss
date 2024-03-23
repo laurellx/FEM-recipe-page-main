@@ -1,0 +1,104 @@
+body {
+  .content {
+    background-color: background;
+    header {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    main {
+      margin: 8%;
+      h1 {
+        color: $mainTitle;
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+        line-height: 35px;
+      }
+      p {
+        @include paragraph;
+        line-height: 22px;
+      }
+      aside {
+        border-radius: 15px;
+        background-color: $asideBackground;
+        padding: 5px 20px;
+        .aside_title {
+        }
+        ul {
+          padding-left: 20px;
+          li {
+            list-style-type: disc;
+            padding: 5px 15px;
+            @include paragraph;
+            &::marker {
+              color: $asideText;
+            }
+          }
+        }
+      }
+      article {
+        section {
+          &:not(:last-child):after {
+            @include separator;
+            margin: 25px 0;
+          }
+          .section_title {
+          }
+          ul {
+            padding-left: 20px;
+            li {
+              list-style-type: disc;
+              padding: 5px 15px;
+              @include paragraph;
+              &::marker {
+                color: $sectionText;
+              }
+            }
+          }
+        }
+
+        section {
+          .section_title {
+          }
+          ol {
+            padding-left: 20px;
+            li {
+              padding: 5px 15px;
+              list-style-type: decimal;
+              line-height: 22px;
+              @include paragraph;
+              &::marker {
+                color: $sectionText;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+        section {
+          .section_title {
+          }
+          table {
+            border-collapse: collapse;
+            width: 100%;
+            tbody {
+              tr {
+                border-bottom: 1px solid $separator;
+              }
+              td {
+                @include paragraph;
+                padding: 10px 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .attribution {
+      display: none;
+      margin: 8%;
+      @include paragraph;
+      font-size: small;
+    }
+  }
+}

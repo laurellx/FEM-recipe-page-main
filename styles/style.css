@@ -1,1 +1,125 @@
-/*# sourceMappingURL=style.css.map */
+/* Primary */
+/* Neutral */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.section_title {
+  color: hsl(14, 45%, 36%);
+  font-family: "Young Serif", sans-serif;
+  font-weight: 400;
+}
+
+.aside_title {
+  color: hsl(332, 51%, 32%);
+  font-family: "Outfit", serif;
+}
+
+.bold {
+  color: hsl(14, 45%, 36%);
+}
+
+body .content {
+  background-color: background;
+}
+body .content header img {
+  width: 100%;
+  height: auto;
+}
+body .content main {
+  margin: 8%;
+}
+body .content main h1 {
+  color: hsl(24, 5%, 18%);
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  line-height: 35px;
+}
+body .content main p {
+  color: hsl(30, 10%, 34%);
+  font-family: "Outfit", serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+body .content main aside {
+  border-radius: 15px;
+  background-color: hsl(330, 100%, 98%);
+  padding: 5px 20px;
+}
+body .content main aside ul {
+  padding-left: 20px;
+}
+body .content main aside ul li {
+  list-style-type: disc;
+  padding: 5px 15px;
+  color: hsl(30, 10%, 34%);
+  font-family: "Outfit", serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+body .content main aside ul li::marker {
+  color: hsl(332, 51%, 32%);
+}
+body .content main article section:not(:last-child):after {
+  content: "";
+  display: block;
+  background-color: hsl(30, 18%, 87%);
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+}
+body .content main article section ul {
+  padding-left: 20px;
+}
+body .content main article section ul li {
+  list-style-type: disc;
+  padding: 5px 15px;
+  color: hsl(30, 10%, 34%);
+  font-family: "Outfit", serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+body .content main article section ul li::marker {
+  color: hsl(14, 45%, 36%);
+}
+body .content main article section ol {
+  padding-left: 20px;
+}
+body .content main article section ol li {
+  padding: 5px 15px;
+  list-style-type: decimal;
+  line-height: 22px;
+  color: hsl(30, 10%, 34%);
+  font-family: "Outfit", serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+body .content main article section ol li::marker {
+  color: hsl(14, 45%, 36%);
+  font-weight: bold;
+}
+body .content main article section table {
+  border-collapse: collapse;
+  width: 100%;
+}
+body .content main article section table tbody tr {
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+body .content main article section table tbody td {
+  color: hsl(30, 10%, 34%);
+  font-family: "Outfit", serif;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 10px 30px;
+}
+body .content .attribution {
+  display: none;
+  margin: 8%;
+  color: hsl(30, 10%, 34%);
+  font-family: "Outfit", serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-size: small;
+}/*# sourceMappingURL=style.css.map */

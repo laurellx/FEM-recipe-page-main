@@ -1,0 +1,14 @@
+@mixin paragraph {
+  color: $paragraph;
+  font-family: "Outfit", serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+@mixin separator {
+  content: "";
+  display: block;
+  background-color: $separator;
+  height: 1px;
+  width: 100%;
+}
