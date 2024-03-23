@@ -1,19 +1,50 @@
 body {
+  @include responsive("medium") {
+    background-color: $background;
+    padding: 10% 0;
+  }
+  @include responsive("large") {
+    background-color: $background;
+    padding: 10% 0;
+  }
   .content {
-    background-color: background;
+    background-color: $content;
+    @include responsive("medium") {
+      padding: 3%;
+    }
+    @include responsive("large") {
+      width: 50%;
+      margin: auto;
+      padding: 3%;
+      border-radius: 15px;
+    }
     header {
       img {
         width: 100%;
         height: auto;
+        @include responsive("medium") {
+          border-radius: 15px;
+        }
+        @include responsive("large") {
+          border-radius: 15px;
+        }
       }
     }
     main {
-      margin: 8%;
+      margin: 5%;
+      @include responsive("medium") {
+        margin: 0;
+      }
+      @include responsive("large") {
+        margin: 0;
+      }
       h1 {
         color: $mainTitle;
         font-family: "Young Serif", serif;
         font-weight: 400;
-        line-height: 35px;
+        @include responsive("large") {
+          font-size: 40px;
+        }
       }
       p {
         @include paragraph;
@@ -23,6 +54,12 @@ body {
         border-radius: 15px;
         background-color: $asideBackground;
         padding: 5px 20px;
+        @include responsive("medium") {
+          margin: 5% 0;
+        }
+        @include responsive("large") {
+          margin: 5% 0;
+        }
         .aside_title {
         }
         ul {
@@ -57,7 +94,6 @@ body {
             }
           }
         }
-
         section {
           .section_title {
           }
@@ -82,7 +118,7 @@ body {
             border-collapse: collapse;
             width: 100%;
             tbody {
-              tr {
+              tr:not(:last-child) {
                 border-bottom: 1px solid $separator;
               }
               td {
@@ -96,7 +132,7 @@ body {
     }
     .attribution {
       display: none;
-      margin: 8%;
+      margin: 5%;
       @include paragraph;
       font-size: small;
     }

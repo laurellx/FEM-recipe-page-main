@@ -12,3 +12,10 @@
   height: 1px;
   width: 100%;
 }
+
+@mixin responsive($size) {
+  $query: map-get($breakpoints, $size);
+  @media (min-width: #{$query}) {
+    @content;
+  }
+}
