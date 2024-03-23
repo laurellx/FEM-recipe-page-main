@@ -1,6 +1,6 @@
 # Frontend Mentor - Recipe page solution
 
-This is a solution to the [Recipe page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Recipe page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -11,94 +11,74 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Mobile](/assets/images/solution/Mobile.png)
+![Desktop](/assets/images/solution/Desktop.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/laurellx/FEM-recipe-page-main)
+- Live Site URL: [Vercel](fem-recipe-page-main.vercel.app)
 
 ## My process
+
+To create this project I started from editing the HTML file organising it from a semantic point of view, using the section and article tags, along with the header, main and footer ones. I took into account the fact that there is a main difference between the mobile and desktop version: there is an additional background that is not visible on the mobile version. Nonetheless, I did create the mobile view first and proceeded, then, to wrap the whole content within a main div, inserted within the body tags.
+I worked with SASS because I want to become more and more familiar with it: all its features permit to avoid repeating code and, although I am confident I could have saved some more, I think the variables and mixins already helped with potential code repetitions.
+Once I was satisfied with the view of the mobile version, I created the mixin to make the project responsive, with the corresponding variables for breakpoints.
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
-- CSS Grid
+- SASS
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+The mixins section of the styles is probably the most interesting of the project, as I created a few of them to avoid code repetition and, also, to make the project responsive. I confess this is some recycled code from my [previous FEM project](https://www.frontendmentor.io/solutions/mobilefirst-solution-using-sass-t9tbtCPBCZ)
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+@mixin separator {
+  content: "";
+  display: block;
+  background-color: $separator;
+  height: 1px;
+  width: 100%;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+Another one from the CSS (SASS) part, some piece of code that might be considered interesting is related to the list items and the indentation from the bullet point.
+
+```css
+li {
+  padding: 5px 15px;
+  list-style-type: decimal;
+  line-height: 22px;
+  @include paragraph;
+  &::marker {
+    color: $sectionText;
+    font-weight: bold;
+  }
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [CSS-Tricks](https://css-tricks.com/everything-you-need-to-know-about-the-gap-after-the-list-marker/) - This page has been extremely useful with the tricky bullet points of the ordered and unordered lists in CSS; it provides a useful tool to visualize how to increase/reduce indentation of the lists and, even more interesting, how to increase/reduce the space between the list bullet point and the text of the item.
+- [Stack Overflow](hthttps://stackoverflow.com/questions/1257430/how-can-i-apply-a-border-only-inside-a-table) - One of the solutions proposed in this article helped me to style the html table at the bottom of the webpage; I must say I do not usually utilise html tables and it was very useful to understand how the table tags work.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@laurellx](https://www.frontendmentor.io/profile/laurellx)
+- GitHub - [@laurellx](https://github.com/laurellx)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Thanks to all the people that made the same Google searches as me and allowed me to find the answer to all my CSS and HTML questions online. Also thanks to the OSOM House coffee place in Madrid that hosted me during the creation of this project: it has been quite an easy challenge, but finding the motivation to code on a beautiful Spring Saturday is not, and the amazing coffee I had here truly helped. And thanks to myself for paying for it, hehe.
