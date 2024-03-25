@@ -72,7 +72,7 @@ li {
 ### Useful resources
 
 - [CSS-Tricks](https://css-tricks.com/everything-you-need-to-know-about-the-gap-after-the-list-marker/) - This page has been extremely useful with the tricky bullet points of the ordered and unordered lists in CSS; it provides a useful tool to visualize how to increase/reduce indentation of the lists and, even more interesting, how to increase/reduce the space between the list bullet point and the text of the item.
-- [Stack Overflow](hthttps://stackoverflow.com/questions/1257430/how-can-i-apply-a-border-only-inside-a-table) - One of the solutions proposed in this article helped me to style the html table at the bottom of the webpage; I must say I do not usually utilise html tables and it was very useful to understand how the table tags work.
+- [Stack Overflow](https://stackoverflow.com/questions/1257430/how-can-i-apply-a-border-only-inside-a-table) - One of the solutions proposed in this article helped me to style the html table at the bottom of the webpage; I must say I do not usually utilise html tables and it was very useful to understand how the table tags work.
 
 ## Author
 
